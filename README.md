@@ -1,12 +1,8 @@
 # React To Do List Application
 
-This is a simple To-Do list app done with React. All tasks are saved into browser's local storage only. The app development
+A simple to-do list application done with React.
 
 ## Getting Started Running the application locally
-
-purposes.
-
-### Prerequisites
 
 ### Installing
 
