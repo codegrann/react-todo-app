@@ -247,6 +247,7 @@ class App extends Component {
                         )
                       </div>
                     }
+                    style={{ backgroundColor: "#1fb000" }}
                   />
                 ))}
               </Tabs>
@@ -289,7 +290,10 @@ class App extends Component {
           </div>
           <div className="enable-remove-mode">
             <If test={!this.state.removeMode}>
-              <FloatingActionButton onClick={this.enableRemoveMode}>
+              <FloatingActionButton
+                onClick={this.enableRemoveMode}
+                style={{ backgroundColor: "green", color: "green" }}
+              >
                 <EditIcon />
               </FloatingActionButton>
             </If>
@@ -297,6 +301,7 @@ class App extends Component {
               <FloatingActionButton
                 secondary={true}
                 onClick={this.disableRemoveMode}
+                style={{ backgroundColor: "green", color: "green" }}
               >
                 <CloseIcon />
               </FloatingActionButton>
