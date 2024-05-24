@@ -22,7 +22,7 @@ function ConfirmDialog(props) {
     />,
     <FlatButton
       label="Confirm"
-      backgroundColor="#FF9584"
+      backgroundColor="red"
       hoverColor="#FF583D"
       className="confirm-dialog"
       onClick={props.onConfirm}
