@@ -18,26 +18,10 @@ import ConfirmDialog from "./ConfirmDialog";
 import If from "./If";
 import "./App.css";
 
-/**
- * @description
- * @constructor
- * @param {Object} props
- */
 class App extends Component {
   constructor(props) {
     super(props);
 
-    /**
-     * @typedef {Object} ComponentState
-     * @property {Object[]} items
-     * @property {number} taskIdCounter
-     * @property {boolean} submitDisabled
-     * @property {number} slideIndex
-     * @property {boolean} dialogOpen
-     * @property {boolean} removeMode
-     */
-
-    /** @type {ComponentState} */
     this.state = {
       items: [],
       taskIdCounter: 0,
@@ -58,9 +42,6 @@ class App extends Component {
     });
   }
 
-  /**
-   * @description
-   */
   addTask = () => {
     const input = this.taskInput.input || {};
     const { value = "" } = input;
@@ -92,10 +73,6 @@ class App extends Component {
     );
   };
 
-  /**
-   * @description
-   * @param {Object} task
-   */
   handleUpdateTask = (task) => {
     this.setState(
       (previousState) => {
@@ -113,10 +90,6 @@ class App extends Component {
     );
   };
 
-  /**
-   * @description
-   * @param {Object} task
-   */
   handleRemoveTask = (task) => {
     this.setState(
       (previousState) => {
@@ -132,11 +105,6 @@ class App extends Component {
     );
   };
 
-  /**
-   * @description
-   * @param {Object} event
-   * @param {value} value
-   */
   handleTextFieldChange = (event, value) => {
     if (value.length > 0 && this.state.submitDisabled) {
       this.setState({ submitDisabled: false });
@@ -145,26 +113,14 @@ class App extends Component {
     }
   };
 
-  /**
-   * @description
-   * @param {Object[]} items
-   */
   updateLocalStorageItems = (items) => {
     window.localStorage.setItem("toDoListItems", JSON.stringify(items));
   };
 
-  /**
-   * @description
-   * @param {number} taskCounter
-   */
   updateTaskCounter = (taskCounter) => {
     window.localStorage.setItem("taskIdCounter", taskCounter);
   };
 
-  /**
-   * @description
-   * @param {number} value
-   */
   handleChange = (value) => {
     this.setState(
       {
@@ -176,27 +132,18 @@ class App extends Component {
     );
   };
 
-  /**
-   * @description
-   */
   enableRemoveMode = () => {
     if (!this.state.removeMode) {
       this.setState({ removeMode: true });
     }
   };
 
-  /**
-   * @description
-   */
   disableRemoveMode = () => {
     if (this.state.removeMode) {
       this.setState({ removeMode: false });
     }
   };
 
-  /**
-   * @description
-   */
   clearTasks = () => {
     this.handleDialogClose();
     this.setState(
@@ -208,24 +155,14 @@ class App extends Component {
     );
   };
 
-  /**
-   * @description
-   */
   handleDialogOpen = () => {
     this.setState({ dialogOpen: true });
   };
 
-  /**
-   * @description
-   */
   handleDialogClose = () => {
     this.setState({ dialogOpen: false });
   };
 
-  /**
-   * @description
-   * @param {Object} e
-   */
   keyPress = (e) => {
     if (e.keyCode === 13) {
       this.addTask();
@@ -258,10 +195,10 @@ class App extends Component {
             open={this.state.dialogOpen}
           />
           <AppBar
-            title={<span style={{ color: "white" }}>To-Do List</span>}
+            title={<span style={{ color: "white" }}>My to do's</span>}
             showMenuIconButton={false}
             style={{
-              backgroundColor: "rgb(0, 151, 167)",
+              backgroundColor: "rgb(0, 167, 3)",
               position: "fixed",
               zIndex: 9999,
             }}
@@ -273,7 +210,7 @@ class App extends Component {
                 width: "100%",
                 paddingTop: 64,
                 zIndex: 8888,
-                backgroundColor: "white",
+                backgroundColor: "rgb(227, 230, 227)",
               }}
             >
               <TextField

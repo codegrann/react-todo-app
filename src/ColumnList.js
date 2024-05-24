@@ -20,27 +20,6 @@ const defaultProps = {
   removeMode: [],
 };
 
-/**
- * @callback removeTask
- * @param {Object} event
- */
-
-/**
- * @callback updateTask
- * @param {Object} target 
- * @param {Object} item 
-
-/**
- * @description 
- * @param {Object} props 
- * @param {string} props.title 
- * @param {Object[]} [props.items=[]] 
- * @param {removeTask} props.removeTask 
- * @param {updateTask} props.updateTask 
- * @param {boolean} [props.removeMode=false] 
- * @returns {XML}
- * @constructor
- */
 const ColumnList = (props) => {
   return (
     <div className="column-list">

@@ -5,13 +5,6 @@ const propTypes = {
   children: PropTypes.object.isRequired,
 };
 
-/**
-
- * @param {Object} props
- * @param {Object} props.children
- * @returns {XML}
- * @constructor
- */
 const MobileTearSheet = (props) => {
   const height = "100%";
   const styles = {

@@ -12,23 +12,6 @@ const propTypes = {
   onConfirm: PropTypes.func.isRequired,
 };
 
-/**
- * @callback cancelCallback
- */
-
-/**
- * @callback confirmCallback
- */
-
-/**
- * @description
- * @constructor
- * @param {Object} props
- * @param {string} props.title
- * @param {boolean} props.open
- * @param {cancelCallback} props.onCancel
- * @param {confirmCallback} props.onConfirm
- */
 function ConfirmDialog(props) {
   // Confirm Dialog buttons
   const dialogActions = [
